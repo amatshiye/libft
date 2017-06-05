@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/03 14:42:50 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/03 17:41:50 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/05 00:27:18 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 char	*ft_strstr(const char *s1, const char *s2)
 {
-	char	*str1;
-	char	*str2;
-	size_t	x;
+	size_t	str2_len;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	x = ft_strlen(s2);
-	while (*str1)
-		if (!ft_memcmp(str1++, str2, x))
-			return (str1 - 1);
+	str2_len = ft_strlen(s2);
+	while (*s1)
+		if (ft_memcmp(s1++, s2, str2_len) == 0)
+			return ((char *)s1 - 1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/28 16:26:16 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/05/28 16:51:38 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/06 15:01:57 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	*ft_memalloc(size_t size)
 	size_t	x;
 
 	x = 0;
-	if ((newstr = malloc(size)) == NULL)
-		return (NULL);
-	else
+	newstr = malloc(size + 1);
 	{
 		while (size > x)
 		{

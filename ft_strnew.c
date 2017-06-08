@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 00:26:10 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/05/29 22:13:30 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/08 00:11:38 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnew(size_t size)
 	size_t	x;
 
 	x = 0;
-	if ((newstr = malloc(sizeof(size))) == NULL)
+	if ((newstr = malloc(size * size)) == NULL)
 		return (NULL);
 	else
 	{

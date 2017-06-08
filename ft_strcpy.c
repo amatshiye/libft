@@ -6,22 +6,18 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 14:56:07 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/05/26 08:56:08 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/07 00:47:28 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *str)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	int		x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		dst[x] = str[x];
-		x++;
-	}
-	dst[x] = '\0';
+	char	*dest;
+	
+	dest = dst;
+	while ((*dest++ = *src++) != '\0')
+		;
 	return (dst);
 }

@@ -6,33 +6,25 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 21:24:38 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/05/26 08:58:51 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/07 22:49:07 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strncat(char *dst, const char *src, size_t n)
 {
 	size_t	x;
-	size_t	y;
-	char	*newstr;
+	int		y;
 
 	x = 0;
-	newstr = (char *)malloc(sizeof(*s1 + *s2));
-	while (s2[x] != '\0')
+	y = ft_strlen(dst);
+	while (src[x] != '\0' && n > x)
 	{
-		newstr[x] = s2[x];
-		x++;
-	}
-	y = x;
-	x = 0;
-	while (n > x)
-	{
-		newstr[y] = s1[x];
-		x++;
+		dst[y] = src[x];
 		y++;
+		x++;
 	}
-	newstr[y] = '\0';
-	return (newstr);
+	dst[y] = '\0';
+	return (dst);
 }

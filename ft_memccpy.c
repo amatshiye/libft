@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/27 02:14:27 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/05/27 02:34:43 by amatshiy         ###   ########.fr       */
+/*   Created: 2017/06/07 20:54:03 by amatshiy          #+#    #+#             */
+/*   Updated: 2017/06/07 21:31:16 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,16 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char			*dest;
-	const char		*source;
-	unsigned char	ch;
-	size_t			x;
+	unsigned char		*dest;
+	const unsigned char	*source;
 
-	dest = (char *)dst;
-	source = (const char *)src;
-	ch = (unsigned char)c;
-	x = 0;
-	while (ch != source[x] && n > x)
+	if (n)
 	{
-		if (source[x] == ch)
-			break ;
-		else
-			dest[x] = source[x];
-		x++;
+		dest = (unsigned char *)dst;
+		source = (const unsigned char *)src;
+		while (n-- != 0)
+			if ((*dest++ = *source++) == (unsigned char)c)
+				return (dest);
 	}
-	dest[x] = '\0';
-	return (dest);
+	return (0);
 }

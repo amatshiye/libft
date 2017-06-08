@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/30 08:08:40 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/03 10:42:23 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/08 02:33:18 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 void	ft_putendl(char const *s)
 {
-	size_t x;
-
-	x = 0;
-	while (s[x])
-	{
-		write(1, &s[x], 1);
-		x++;
-	}
+	ft_putstr((char *)s);
 	write(1, "\n", 1);
 }

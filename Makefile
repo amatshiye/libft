@@ -6,7 +6,7 @@
 #    By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/22 22:09:18 by amatshiy          #+#    #+#              #
-#    Updated: 2017/06/08 02:35:51 by amatshiy         ###   ########.fr        #
+#    Updated: 2017/06/09 21:36:14 by amatshiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c\
 	  ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strncat.c\
 	  ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c\
 	  ft_strrchr.c ft_tolower.c ft_toupper.c ft_strstr.c\
-	  ft_striter.c
+	  ft_striter.c ft_strnstr.c
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -35,7 +35,7 @@ $(NAME):
 	ranlib $(NAME)
 
 clean:
-	rm -Rf *.o
+	rm -Rf $(OBJ)
 
 fclean: clean
 	rm -Rf $(NAME)

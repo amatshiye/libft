@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 14:56:07 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/07 00:47:28 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/09 13:43:12 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strcpy(char *dst, const char *src)
 {
 	char	*dest;
-	
+
 	dest = dst;
 	while ((*dest++ = *src++) != '\0')
 		;

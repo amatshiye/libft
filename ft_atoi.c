@@ -6,29 +6,39 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 21:52:40 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/04 20:59:36 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/09 21:36:48 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_isspace(int c)
 {
-	int x;
-	int o;
+	if ((c >= '\t' && c <= '\r') || c == 32)
+		return (1);
+	return (0);
+}
 
-	x = 0;
-	while (*str == 32 || (*str >= '\r' && *str <= '\t'))
-		str++;
-	if (*str == '-')
-		o = -1;
-	else
-		o = 1;
-	str++;
-	while (*str && ft_isdigit(*str))
+int	ft_atoi(const char *c)
+{
+	int	value;
+	int	sign;
+
+	value = 0;
+	sign = 1;
+	while (ft_isspace(*c))
+		c += 1;
+	if (*c == '+' || *c == '-')
 	{
-		x = (x * 10) + (*str - '0');
-		str++;
+		if (*c == '-')
+			sign = -1;
+		c++;
 	}
-	return (x * o);
+	while (ft_isdigit(*c))
+	{
+		value *= 10;
+		value += (int)(*c - '0');
+		c++;
+	}
+	return (value * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/03 17:41:28 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/09 21:39:40 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/11 14:26:36 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	int x;
-	size_t needle_len;
+	size_t n;
 
-	if (0 == (needle_len = strnlen(s2, len)))
-		return (char *)s1;
-
-	x = 0;
-	while (x <= (int)(len - needle_len))
+	if (*s2 == '\0')
+		return ((char *)s1);
+	n = ft_strlen(s2);
+	while (*s1 != '\0' && len-- >= n)
 	{
-		if ((s1[0] == s2[0]) &&
-				(0 == strncmp(s1, s2, needle_len)))
-			return (char *)s1;
-		x++;
+		if (*s1 == *s2 && ft_memcmp(s1, s2, n) == 0)
+			return ((char *)s1);
 		s1++;
 	}
-	return NULL;
+	return (NULL);
 }
+

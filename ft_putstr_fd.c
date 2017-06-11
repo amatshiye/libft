@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 11:33:39 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/05/25 11:36:04 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/10 23:56:15 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	x;
 
+	if (s == NULL)
+		return ;
 	x = 0;
 	while (s[x] != '\0')
 	{

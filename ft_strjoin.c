@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/01 15:12:30 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/08 00:28:10 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/11 10:20:32 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	y;
 	char	*newstr;
 
+	if ((s1 == NULL) || (s2 == NULL))
+		return (NULL);
 	x = 0;
 	newstr = (char *)malloc(sizeof(*s1) * ft_strlen((char *)s1) + 1);
-	newstr = (char *)malloc(sizeof(*s2) * ft_strlen((char *)s1) + 1);
+	if (newstr == NULL)
+		return (NULL);
 	while (s1[x] != '\0')
 	{
 		newstr[x] = s1[x];

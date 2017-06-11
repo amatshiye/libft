@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/26 17:23:34 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/11 14:35:15 by amatshiy         ###   ########.fr       */
+/*   Created: 2017/06/11 02:38:53 by amatshiy          #+#    #+#             */
+/*   Updated: 2017/06/11 03:02:14 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
+	char			*newstr;
+	unsigned int	x;
 
-	str = (char *)s + ft_strlen(s);
-	while (*str != c)
+	if ((s == NULL) || (f == NULL))
+		return (NULL);
+	if (s && f)
 	{
-		if (str == s)
+		x = 0;
+		newstr = (char *)malloc(sizeof(*s) * ft_strlen((char *)s) + 1);
+		if (newstr == NULL)
 			return (NULL);
-		str--;
+		while (s[x] != 0)
+		{
+			newstr[x] = f(x, s[x]);
+			x++;
+		}
+		newstr[x] = '\0';
+		return (newstr);
 	}
-	return (str);
+	return (NULL);
 }

@@ -6,26 +6,28 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 21:52:40 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/09 21:36:48 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/10 23:17:24 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if ((c >= '\t' && c <= '\r') || c == 32)
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(const char *c)
+int			ft_atoi(const char *c)
 {
 	int	value;
 	int	sign;
+	int	m;
 
 	value = 0;
 	sign = 1;
+	m = 0;
 	while (ft_isspace(*c))
 		c += 1;
 	if (*c == '+' || *c == '-')
@@ -39,6 +41,9 @@ int	ft_atoi(const char *c)
 		value *= 10;
 		value += (int)(*c - '0');
 		c++;
+		m++;
 	}
+	if (m > 19)
+		return ((sign < 0) ? 0 : -1);
 	return (value * sign);
 }

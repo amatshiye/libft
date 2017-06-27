@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/03 17:41:28 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/11 14:26:36 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/11 15:27:14 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	}
 	return (NULL);
 }
-

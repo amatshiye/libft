@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/27 02:42:53 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/11 13:39:15 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/06/11 15:26:58 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_strclr(char *s)
 {
 	size_t	x;
 	char	*str;
-	
+
 	if (s == NULL)
 		return ;
 	x = 0;

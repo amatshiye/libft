@@ -6,7 +6,7 @@
 #    By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/22 22:09:18 by amatshiy          #+#    #+#              #
-#    Updated: 2017/06/11 11:51:39 by amatshiy         ###   ########.fr        #
+#    Updated: 2017/07/06 09:43:32 by amatshiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c\
 	  ft_strrchr.c ft_tolower.c ft_toupper.c ft_strstr.c\
 	  ft_striter.c ft_strnstr.c ft_striteri.c ft_strmap.c\
 	  ft_strmapi.c ft_strsub.c ft_strtrim.c ft_strsplit.c\
-	  ft_itoa.c
+	  ft_itoa.c get_next_line.c
 
 OBJ = $(SRC:%.c=%.o)
 

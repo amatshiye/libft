@@ -6,7 +6,7 @@
 /*   By: amatshiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/22 15:28:51 by amatshiy          #+#    #+#             */
-/*   Updated: 2017/06/25 13:08:00 by amatshiy         ###   ########.fr       */
+/*   Updated: 2017/05/26 16:19:06 by amatshiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_strlen(const	char *s)
 	int x;
 
 	x = 0;
-	if (s == NULL)
-		return (0);
 	while (s[x] != '\0')
 		x++;
 	return (x);
